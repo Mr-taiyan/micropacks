@@ -9,8 +9,8 @@ module.exports = function checksort(array, comparator) {
 
     comparator = comparator || defaultComparator;
 
-    for (let i = 0, length = array.length; i < length - 1; i++) {
-        if (comparator(array[i], array[i + 1]) > 0) {
+    for (let i = 1, length = array.length; i < length; i++) {
+        if (comparator(array[i - 1], array[i]) > 0) {
             return false;
         }
     }
