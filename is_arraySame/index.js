@@ -4,7 +4,10 @@ function judge(arr1, arr2) {
     }
 
     for (let [k, v] of arr1.entries()) {
-        if (arr2[k] !== v) {
+
+        if (Array.isArray(v)) {
+            return judge(v, arr2[k]);
+        } else if (v !== arr2[k]) {
             return false;
         }
     }
