@@ -1,5 +1,5 @@
 function judge(arr1, arr2) {
-    if (!Array.isArray(arr1) && !Array(arr2 && arr1.length !== arr2.length)) {
+    if (!Array.isArray(arr1) || !Array.isArray(arr2) || arr1.length !== arr2.length) {
         return false;
     }
 
