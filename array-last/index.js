@@ -11,7 +11,7 @@ function last(arr, n) {
     }
 
     n = isNumber(n) ? +n : 1;
-    if (n === 1) {
+    if (n === 1 || n == null) {
         return arr[len - 1];
     }
 
