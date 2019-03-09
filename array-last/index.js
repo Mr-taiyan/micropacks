@@ -15,6 +15,14 @@ function last(arr, n) {
         return arr[len - 1];
     }
 
+    if (n < 0) {
+        n = 1;
+    } else if (n === 0) {
+        return [];
+    } else if (n > len) {
+        n = len;
+    }
+
     var res = new Array(n);
     while (n--) {
         res[n] = arr[--len];
