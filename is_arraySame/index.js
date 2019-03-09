@@ -6,7 +6,9 @@ function judge(arr1, arr2) {
     for (let [k, v] of arr1.entries()) {
 
         if (typeof v === typeof arr2[k] && Array.isArray(v)) {
-            return judge(v, arr2[k]);
+            if (!judge(v, arr2[k])) {
+                return false;
+            }
         } else if (v !== arr2[k]) {
             return false;
         }
