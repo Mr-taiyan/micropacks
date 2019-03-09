@@ -15,6 +15,9 @@ describe('Array', function () {
     it('should not be same', function () {
         assert(!isArraySame([1,2,3], [2,3,4]), 'expect not to be same');
         assert(!isArraySame([1,2,3], [2,1,3]), 'expect not to be same');
-        assert(!isArraySame([[1,2], [[3,4,5],[6,7],8],9]), [[1,2], [[3,4,5],[6,7]],[8,9]], 'expect no to be same');
+        assert(!isArraySame([[1,2], [[3,4,5],[6,7],8],9], [[1,2], [[3,4,5],[6,7]],[8,9]]), 'expect no to be same');
+    });
+    it('should not be same', function () {
+        assert(!isArraySame([[1,2], 9], [[1,2], 0]), 'expect no to be same');
     });
 });
