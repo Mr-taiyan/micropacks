@@ -1,6 +1,6 @@
 function diff(arr1, arr2) {
-    obj1 = {};
-    obj2 = {};
+    const obj1 = {};
+    const obj2 = {};
     for (let x of arr1) {
         obj1[x] = true;
     }
@@ -11,7 +11,7 @@ function diff(arr1, arr2) {
         }
     }
 
-    return obj2.keys();
+    return Object.keys(obj2);
 
 }
 
